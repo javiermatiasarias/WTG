@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wind Turbine Components</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #00b300; /* FH Aachen inspired green */
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .component-list {
+      max-width: 600px;
+      width: 100%;
+      list-style: none;
+    }
+
+    .component-item {
+      padding: 10px 15px;
+      background-color: #1e1e1e;
+      border: 1px solid #00b300;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .component-item:hover {
+      background-color: #00b300;
+      color: #1e1e1e;
+    }
+
+    .component-details {
+      display: none;
+      background-color: #333333;
+      color: #ffffff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .component-details p {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Wind Turbine Components</h1>
+<ul class="component-list">
+  <!-- Example Component (repeat structure as needed) -->
+  <li class="component-item" onclick="toggleDetails(this)">
+    Blades
+    <div class="component-details">
+      <p><strong>Description:</strong> Long, curved structures that capture the wind.</p>
+      <p><strong>Function:</strong> Convert wind energy into rotational energy.</p>
+    </div>
+  </li>
+  <li class="component-item" onclick="toggleDetails(this)">
+    Nacelle
+    <div class="component-details">
+      <p><strong>Description:</strong> The main housing unit on top of the tower.</p>
+      <p><strong>Function:</strong> Protects internal components like the gearbox, generator, and control systems.</p>
+    </div>
+  </li>
+  <li class="component-item" onclick="toggleDetails(this)">
+    Gearbox
+    <div class="component-details">
+      <p><strong>Description:</strong> Mechanism inside the nacelle that adjusts the speed of the rotor.</p>
+      <p><strong>Function:</strong> Increases the rotational speed to a level suitable for electricity generation.</p>
+    </div>
+  </li>
+  <!-- Repeat the above structure for each component -->
+</ul>
+
+<script>
+  function toggleDetails(element) {
+    const details = element.querySelector(".component-details");
+    if (details.style.display === "block") {
+      details.style.display = "none";
+    } else {
+      details.style.display = "block";
+    }
+  }
+</script>
+
+</body>
+</html>
